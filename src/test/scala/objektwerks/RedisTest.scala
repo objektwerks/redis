@@ -9,6 +9,6 @@ class RedisTest extends AnyFunSuite with Matchers {
   val conf = ConfigFactory.load("test.conf")
 
   test("redis") {
-    println("redis test")
+    println("2021.3.24 - TODO!")
   }
 }
