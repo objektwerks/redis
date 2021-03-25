@@ -12,7 +12,9 @@ class RedisTest extends AnyFunSuite with Matchers {
   val port = conf.getInt("port")
   val client = new RedisClient(host, port)
   
-  test("redis") {
-    
+  test("set > get") {
+    client.set("key", "value") shouldBe true
+    client.get("key") shouldBe Some("value")
+    client.del("key").get should be > 0L
   }
 }
