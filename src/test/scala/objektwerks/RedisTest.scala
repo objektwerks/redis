@@ -31,4 +31,16 @@ class RedisTest extends AnyFunSuite with Matchers {
     client.lpop(key) shouldBe Some(value)
     client.llen(key) shouldBe Some(0L)
   }
+
+  test("map") {
+    import serialization._
+    import Parse.Implicits._
+    
+    val key = "3"
+    val map = Map("1" -> 1, "2" -> 2, "3" -> 3)
+    client.hmset(key, map) shouldBe true
+    client.hmget[String, Int](key, "1", "2", "3") shouldBe Some(map)
+    client.del(key).get should be > 0L
+    client.hmget[String, Int](key, "1", "2", "3") shouldBe Some(Map())
+  }
 }
