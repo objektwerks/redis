@@ -20,5 +20,6 @@ class RedisTest extends AnyFunSuite with Matchers {
     client.set(key, value) shouldBe true
     client.get(key) shouldBe Some(value)
     client.del(key).get should be > 0L
+    client.get(key) shouldBe None
   }
 }

@@ -1,6 +1,6 @@
 Redis
 -----
->Redis feature tests.
+>Redis feature tests. See: https://github.com/debasishg/scala-redis
 
 Test
 ----
