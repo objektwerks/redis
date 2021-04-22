@@ -7,6 +7,6 @@ libraryDependencies ++= {
     "net.debasishg" %% "redisclient" % "3.30" % Test,
     "com.typesafe" % "config" % "1.4.0" % Test,
     "ch.qos.logback" % "logback-classic" % "1.2.3" % Test,
-    "org.scalatest" %% "scalatest" % "3.2.7" % Test
+    "org.scalatest" %% "scalatest" % "3.2.8" % Test
   )
 }
