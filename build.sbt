@@ -6,7 +6,7 @@ libraryDependencies ++= {
   Seq(
     "net.debasishg" %% "redisclient" % "3.42" % Test,
     "com.typesafe" % "config" % "1.4.3" % Test,
-    "ch.qos.logback" % "logback-classic" % "1.4.14" % Test,
+    "ch.qos.logback" % "logback-classic" % "1.5.0" % Test,
     "org.scalatest" %% "scalatest" % "3.2.17" % Test
   )
 }
